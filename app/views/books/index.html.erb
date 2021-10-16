@@ -12,14 +12,17 @@
     </thead>
     <tbody>
       <tr>
-        <td>テストタイトル</td>
-        <td>テスト本文</td>
+        <% @books.each do |book| %>
+        <td><%= book.title %></td>
+        <td><%= book.body %></td>
         <td>Show</td>
         <td>Edit</td>
         <td>Destory</td>
+        <% end %>
     </tbody>
   </table>
-  <h2>New book</h2>
+
+  <h2>  New book</h2>
   <!-- form_with部分の追加 -->
   <%= form_with model:@book, local:true do |f| %>
     <label>Title</label>
@@ -30,4 +33,6 @@
 
     <%= f.submit 'Create Book' %>
   <% end %>
+</body>
+
 </body>
