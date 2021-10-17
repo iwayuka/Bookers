@@ -1,38 +1,39 @@
-<header>
-  <h1 class="heading">Books</h1>
-</header>
 <body>
-  <table>
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Body</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-    <tbody>
+    <p id="notice"></p>
+
+<h1>Books</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
       <tr>
         <% @books.each do |book| %>
         <td><%= book.title %></td>
         <td><%= book.body %></td>
-        <td>Show</td>
-        <td>Edit</td>
-        <td>Destory</td>
+        <td><%= link_to "Show",  "books/#{book.id}" %></td>
+        <td><a href="t">Edit</a></td>
+        <td><a data-confirm="Are you sure?"  href="">Destroy</a></td>
         <% end %>
-    </tbody>
-  </table>
+      </tr>
+  </tbody>
+</table>
 
-  <h2>  New book</h2>
-  <!-- form_with部分の追加 -->
-  <%= form_with model:@book, local:true do |f| %>
-    <label>Title</label>
-    <%= f.text_field :title %>
+<h2>New book</h2>
+<!-- form_with部分の追加 -->
+ <%= form_with model:@book, local:true do |f| %>
+  <label>Title</label>
+  <%= f.text_field :title %>
 
-    <label>Body</label>
-    <%= f.text_field :body %>
+  <label>Body</label>
+  <%= f.text_area :body %>
 
-    <%= f.submit 'Create Book' %>
-  <% end %>
-</body>
-
+  <%= f.submit 'Create Book' %>
+<% end %>
 </body>

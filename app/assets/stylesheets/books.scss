@@ -8,12 +8,16 @@ body {
     font-size: 13px;
     line-height: 18px;
     margin: 33px;
+    display: block;
 }
 
 table {
+    display: table;
     border-collapse: separate;
+    box-sizing: border-box;
     text-indent: initial;
     border-spacing: 2px;
+    border-color: grey;
 }
 
 thead {
