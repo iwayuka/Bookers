@@ -11,8 +11,11 @@
   <%= @book.body %>
 </p>
 
-<a href="">Edit</a> |
-<a  href="/books">Back</a>
+<p>
+  <%= link_to "Edit", edit_book_path(@book.id) %>
+   |
+  <a  href="/books">Back</a>
+</p>
 
 
 
