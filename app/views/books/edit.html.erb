@@ -1,6 +1,9 @@
 <body>
+  <p class="notice"><%= flash[:notice] %></p>
   <h1>Editing Book</h1>
 
+  <!-- バリテーションの表示 -->
+  
   <%= form_with model:@book, url:"/books/#{@book.id}", local:true do |f| %>
 
   <label>Title</label>

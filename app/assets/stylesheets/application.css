@@ -27,8 +27,13 @@ body {
     font-size: 13px;
     line-height: 18px;
     margin: 33px;
-    display: block;
 }
+
+a {
+    color: #000;
+}
+
+
 
 
 p, ol, ul, td {
@@ -37,3 +42,9 @@ p, ol, ul, td {
     line-height: 18px;
     margin: 33px;
 }
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
