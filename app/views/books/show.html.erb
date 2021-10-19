@@ -1,5 +1,5 @@
 <body>
-<p class="notice"><%= flash[:notice] %></p>
+<p><%= flash[:notice] %></p>
 <p>
   <strong>Title:</strong>
   <%= @book.title %>
@@ -9,10 +9,11 @@
   <strong>Body:</strong>
   <%= @book.body %>
 </p>
-
+<span>
   <%= link_to "Edit", edit_book_path(@book.id) %>
    |
   <%= link_to "Back", books_path %>
+</span>
 
 
 
